@@ -177,3 +177,37 @@ header p {
         font-size: 1.8rem;
     }
 }
+/* ... (kode CSS lama Anda) ... */
+
+/* GAYA TAMBAHAN UNTUK HASIL DIAGNOSA */
+
+.result-entry {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.result-entry h4 {
+    color: var(--primary-color);
+    margin: 0 0 0.25rem 0;
+}
+
+.result-entry h5 {
+    margin: 0.75rem 0 0.25rem 0;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.result-entry p {
+    margin: 0;
+}
+
+.kecocokan-info {
+    font-size: 0.9em;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
