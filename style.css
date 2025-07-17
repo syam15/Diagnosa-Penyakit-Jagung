@@ -1,0 +1,179 @@
+/* Variabel Warna untuk kemudahan kustomisasi */
+:root {
+    --primary-color: #27ae60; /* Hijau modern */
+    --primary-hover: #2ecc71;
+    --secondary-color: #f39c12; /* Aksen kuning/oranye */
+    --background-color: #f7f9fc;
+    --container-bg: #ffffff;
+    --text-dark: #34495e;
+    --text-light: #7f8c8d;
+    --border-color: #ecf0f1;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Reset dan Gaya Dasar Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.7;
+    padding: 2rem;
+}
+
+/* Container Utama */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: var(--container-bg);
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+/* Form Gejala */
+#formGejala {
+    margin-bottom: 2rem;
+    max-height: 400px; /* Batas tinggi agar tidak terlalu panjang */
+    overflow-y: auto; /* Tambahkan scroll jika daftar gejala panjang */
+    padding-right: 1rem; /* Ruang untuk scrollbar */
+}
+
+/* Item Gejala Individual */
+.gejala-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gejala-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.gejala-item input[type="checkbox"] {
+    /* Membuat checkbox lebih besar dan modern */
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin-right: 1rem;
+    font: inherit;
+    color: var(--primary-color);
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.15em solid var(--border-color);
+    border-radius: 0.25em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.gejala-item input[type="checkbox"]::before {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--primary-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.gejala-item input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.gejala-item label {
+    font-size: 0.95rem;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* Tombol Utama */
+#btnDiagnosa {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, var(--primary-hover), var(--primary-color));
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(45, 204, 112, 0.3);
+}
+
+#btnDiagnosa:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(45, 204, 112, 0.4);
+}
+
+/* Area Hasil */
+#hasil {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #e8f8f5; /* Latar belakang hijau muda */
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+#hasil h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+#hasil h4 {
+    margin-top: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+#hasil p {
+    color: var(--text-dark);
+}
+
+/* Penyesuaian untuk layar kecil (Mobile) */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
