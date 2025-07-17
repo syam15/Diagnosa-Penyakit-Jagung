@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar Penyakit Jagung</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Sistem Pakar Jagung 🌽</h1>
+            <p>Identifikasi penyakit pada tanaman jagung Anda dengan memilih gejala yang sesuai di bawah ini.</p>
+        </header>
+
+        <main>
+            <form id="formGejala">
+                </form>
+    
+            <button id="btnDiagnosa">Mulai Diagnosa</button>
+    
+            <div id="hasil" style="display:none;">
+                <h3>Hasil Diagnosa</h3>
+                <p id="namaPenyakit"></p>
+                <h4>Solusi yang Direkomendasikan</h4>
+                <p id="solusiPenyakit"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
